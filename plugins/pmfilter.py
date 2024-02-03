@@ -1399,7 +1399,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                ],[
                  InlineKeyboardButton("🔍 ꜱᴇᴀʀᴄʜ ʜᴇʀᴇ 🔎", url="https://t.me/search_movie45")
                ]]
-     MoviesLinkShare.id in ADMINS:
+     if query.from_user.id in (ADMINS):
             user = await client.get_users(from_user)
             reply_markup = InlineKeyboardMarkup(btn)
             content = query.message.text
