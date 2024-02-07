@@ -1641,7 +1641,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         
         repluseup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text=script.PLAN_TXT.format(query.from_user.mention),
+            text=script.PLAN1_TXT.format(query.from_user.mention),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
